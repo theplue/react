@@ -4,6 +4,7 @@ var keyMirror = require('react/lib/keyMirror');
 
 module.exports = keyMirror({
 	INITIALIZE: null,
-	INITIALIZE_ERROR: null
+	INITIALIZE_ERROR: null,
+	CREATE_TEAM: null
 
 });

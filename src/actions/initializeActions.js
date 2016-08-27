@@ -8,16 +8,16 @@ var InitializeActions = {
 	initApp: function() { 
 		var url = 'school/getAllSchoolSeeds';
 		Utils.makeGETPromise(url)
-		.then(function(dataFromServer){
+		.done(function(dataFromServer){
 			Dispatcher.dispatch({
-			actionType: ActionTypes.INITIALIZE,
-			data: dataFromServer
+				actionType: ActionTypes.INITIALIZE,
+				data: dataFromServer
 			});
 		})
 		.fail(function(){
 			Dispatcher.dispatch({
-			actionType: ActionTypes.INITIALIZE_ERROR,
-			errorMessage: 'Unable to get initialization data'
+				actionType: ActionTypes.INITIALIZE_ERROR,
+				errorMessage: 'Unable to get initialization data'
 			});
 		});
 	}
